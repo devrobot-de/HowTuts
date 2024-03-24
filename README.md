@@ -1,5 +1,5 @@
 # HowTuts
-HowTuts ist ein Tool zum Erstellen von interaktiven Klickwegen z.B. für Schulungs- und Trainingszwecke.
+HowTuts ist ein Tool zum Erstellen von interaktiven Klickweg-Anleitungen z.B. für Schulungs- und Trainingszwecke.
 
 Das Tool eignet sich sehr gut dazu, komplizierte Klickwege einfach und nachvollziehbar näher zu bringen. Anstelle von unübersichtlichen Dokumenten mit hintereinander folgenden Screenshot-Ausschnitten, ist die Idee hinter dem Tool, beim Benutzer möglichst den Eindruck zu erzeugen, als würde er sich tatsächlich gerade angeleitet in dem jeweiligen Programm befinden. Der gesamte Klickweg wird Schritt für Schritt selbst nachvollzogen, indem an den richtigen Stellen die Klicks jeweils selbst durchgeführt werden müssen, um zum nächsten Schritt zu gelangen. 
 
