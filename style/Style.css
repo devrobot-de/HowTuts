@@ -1,0 +1,432 @@
+/* DEMO ITEMS */
+
+.demo {
+    background: rgb(48, 104, 177);
+    width: 150px;
+    height: 70px;
+}
+
+.demoL {
+    background: rgb(48, 104, 177);
+    width: 200px;
+    height: 90px;
+}
+
+/* CALC SIZES */
+
+:root {
+    --nav-height: 60px;
+    --footer-height: 25px;
+    --sidebar-height: calc(100vh - var(--nav-height) - var(--footer-height));
+    --sidebar-width: 400px;
+    --sidebar-bg-color: #2a3e51;
+    --content-height: calc(100vh - var(--nav-height) - var(--footer-height));
+    --border-color: rgb(175, 175, 175);
+    --button-color: #2198dd;
+    --button-inactive-color: #17577c;
+    --button-highlight-color: #49b6f5;
+    --nav-bg-color: #1b1b1b;
+    --nav-active-bg-color: var(--button-color);
+    --nav-highlight-bg-color: var(--button-highlight-color);
+}
+
+/* ELEMENT STYLE */
+
+body {
+    font-family: arial, sans-serif;
+    font-size: 18px;
+    height: 100%;
+}
+
+/* CLASS STYLES */
+
+.invisible {
+    display: none !important;
+}
+
+.invisible-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.margin-bottom-10 {
+    margin-bottom: 10px !important;
+}
+
+.relative {
+    position: relative;
+}
+
+.noscroll {
+    overflow: hidden !important;
+}
+
+
+/* SITE-WRAPPER */
+
+.site-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+/* *** TEXTFIELD *** */
+
+.textfield {
+    height: 40px;
+    border-radius: 6px;
+    padding: 10px;
+    border: none;
+}
+
+/* *** TEXTAREA *** */
+
+.textarea {
+    height: 120px;
+    border-radius: 6px;
+    padding: 10px;
+    border: none;
+    width: 100%;
+}
+
+/* *** BUTTON *** */
+
+.button {
+    padding: 0px 12px;
+    height: 40px;
+    min-width: 40px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    background: var(--button-color);
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.3);
+    user-select: none;
+    cursor: pointer;
+    color: white;
+    /* for non input button-like elements */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover {
+    background: var(--button-highlight-color);
+}
+
+.inactive:hover {
+    background: var(--button-inactive-color);
+}
+
+.button:active {
+    background: var(--button-color);
+}
+
+.button.inactive {
+    background: var(--button-inactive-color);
+    color: #223242;
+    cursor: default;
+}
+
+.inactive {
+    background: var(--button-inactive-color);
+    color: #223242;
+    cursor: default;
+}
+
+.button.toggled {
+    background: var(--button-inactive-color);
+    color: #223242;
+    cursor: default;
+}
+
+/* *** TOGGLEBOX & CONTENTBOX *** */
+
+.togglebox, .contentbox {
+    color: white;
+}
+
+.togglebox .titlebar, .contentbox .titlebar {
+    padding: 10px;
+    background: #192531;
+    border-radius: 8px 8px 0 0;
+}
+
+.togglebox .titlebar .title, .contentbox .titlebar .title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.togglebox .titlebar.closed {
+    border-radius: 8px 8px 8px 8px;
+}
+
+.togglebox .contentbox, .contentbox .contentbox {
+    padding: 10px;
+    background: #223242;
+    border-radius: 0 0 8px 8px;
+}
+
+.togglebox .contentbox>*, .contentbox .contentbox>* {
+    margin-bottom: 10px;
+}
+
+.togglebox .area, .contentbox .area {
+    background: #192531;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* DROPDOWN */
+
+.dropdown {
+    width: 100%;
+    position: relative;
+}
+
+.dropdown::before {
+    content: "\2BC6";
+    font-size: 20px;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: #fff;
+}
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    background: var(--button-color);
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: inherit;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+select:hover {
+    background: var(--button-highlight-color);
+}
+
+select option {
+    background: #FFF;
+    color: #666;
+    padding: 15px;
+}
+
+/* Clicklist */
+
+.clicklist {
+
+}
+
+.clicklist-item {
+    padding: 10px 5px;
+    user-select: none;
+}
+
+.clicklist-item:hover {
+    background-color: #3a536d;
+    cursor: pointer;
+}
+
+/* HEADER & NAVIGATION */
+
+.header {
+    position: relative;
+    height: var(--nav-height);
+    background: var(--nav-bg-color);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.397);
+    color: white;
+    z-index: 100;
+}
+
+.site-logo {
+    font-size: 24px;
+    margin: 0 30px 0 0;
+}
+
+.nav-element, .site-logo {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    height: 100%;
+    font-weight: bold;
+    user-select: none;
+}
+
+.nav-element:hover {
+    background: var(--nav-highlight-bg-color);
+    cursor: pointer;
+}
+
+.active-nav-entry {
+    background: var(--nav-active-bg-color) !important;
+}
+
+/* CONTENT-WRAPPER */
+
+.content-wrapper {
+    position: relative;
+    height: var(--content-height);
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    top: var(--nav-height);
+    width: var(--sidebar-width);
+    min-width: var(--sidebar-width);
+    background: var(--sidebar-bg-color);
+    color: white;
+    padding: 15px;
+    height: var(--sidebar-height);
+    border-right: 1px solid var(--border-color);
+    overflow-y: scroll;
+    box-shadow: 3px 0px 5px rgba(0, 0, 0, 0.397);
+}
+
+.sidebar h1 {
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.sidebar h2 {
+    font-size: 22px;
+    padding: 0 0 10px 0;
+    text-decoration: underline;
+}
+
+.sidebar>* {
+    margin-bottom: 20px;
+}
+
+/* SCROLLBAR */
+
+/* width */
+
+.sidebar::-webkit-scrollbar {
+    width: 15px;
+    height: 10px;
+}
+
+/* Track */
+
+.sidebar::-webkit-scrollbar-track {
+    background: var(--sidebar-bg-color);
+}
+
+/* Handle */
+
+.sidebar::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    background: #192531;
+    background: var(--button-color);
+    box-shadow: 0px 4px 5px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* Handle on hover */
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #121b24;
+    background: var(--button-highlight-color);
+}
+
+/* CONTENT */
+
+.content {
+    position: relative;
+    height: var(--content-height);
+    width: 100%;
+    padding: 15px;
+    overflow: scroll;
+}
+
+/* FOOTER */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: var(--footer-height);
+    padding: 0 10px;
+    color: #FFF;
+    font-size: 12px;
+    background: var(--nav-bg-color);
+}
+
+/* ################### */
+
+/* TAB SPECIFIC STYLES */
+
+/* ################### */
+
+/* TUTORIAL  */
+
+.tutcontentcontainer {
+    /* box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.417); */
+    /* border: 1px solid var(--border-color); */
+    /* background-color: rgb(228, 228, 228); */
+    width: 1480px;
+    /* width: 100%; */
+    height: 800px;
+    user-select: none;
+    /* padding: 10px; */
+}
+
+.tutimage {
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.417);
+    border: 1px solid var(--border-color);
+}
+
+.clickzone {
+    position: absolute;
+    border: 5px #f51b22 solid;
+    /* box-shadow: inset 5px 5px rgba(0, 0, 0, 0.417), 5px 5px rgba(0, 0, 0, 0.417); */
+    z-index: 150;
+    border-radius: 0px;
+}
+
+.clickzone:hover {
+    border: 5px #ffc6408a solid;
+    cursor: pointer;
+}
+
+.textzone {
+    position: absolute;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.417);
+    z-index: 120;
+    border: none;
+    font-size: 16px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    font-weight: bold;
+    background: rgba(255, 252, 96, 1);
+    padding: 10px;
+    user-select: none;
+    border-radius: 0;
+}
+
+.sidebar_tab-tutorial .button {
+    margin-right: 8px;
+}
+
+.highlightzone {
+    position: absolute;
+    z-index: 120;
+    border: none;
+    background: rgba(251, 255, 0, 0.705);
+    user-select: none;
+    border-radius: 0;
+}
+
+/* EDITOR  */
